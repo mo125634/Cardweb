@@ -1,0 +1,118 @@
+/* 基本樣式 */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Comic Sans MS', cursive;
+    background-color: #fdf5e6;
+    transition: background-color 1.0s ease;
+    color: #333;
+  }
+  
+  #login input {
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    margin-bottom: 10px;
+    font-size: 1em;
+  }
+  
+  #login button {
+    background-color: #ffb6c1;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.5s;
+  }
+  
+  #login button:hover {
+    background-color: #ff69b4;
+  }
+  
+  .card {
+    perspective: 3000px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column; /* 確保卡片和按鈕是垂直排列的 */
+    align-items: center;    /* 水平居中對齊 */
+    opacity: 0;
+    transform: translateY(50px); /* 從下方 50px 開始 */
+    transition: opacity 1.5s ease, transform 1.5s ease;
+  }
+  
+  /* 顯示狀態：卡片移動到原始位置並完全顯示 */
+  .card.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .card-inner {
+    width: 280px;
+    height: 160px;
+    position: relative;
+    transition: transform 1.2s;
+    transform-style: preserve-3d;
+  }
+  
+  .card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    font-size: 18px;
+  }
+  
+  .card-front {
+    background-color: #ffe4e1;
+    color: #333;
+  }
+  
+  .card-back {
+    background-color: #ffb6c1;
+    color: white;
+    transform: rotateY(180deg);
+  }
+  
+  .flipped .card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-button {
+    position: relative; /* 讓按鈕相對於父元素定位 */
+    top: -100px; /* 調整按鈕的垂直位置 */
+    left: -350px; /* 調整按鈕的水平位置 */
+    margin-top: 20px; /* 添加外部距離 */
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.8s;
+    transition: background-color 0.3s ease; /* 添加顏色過渡效果 */
+  }
+  
+  .flip-button:hover {
+    background: #0056b3;
+    color: white; /* 修改文字顏色 */
+    transform: translateY(-2px); /* 按鈕向上浮動效果 */
+    transition: all 0.4s ease; /* 添加過渡動畫 */
+  }
+  
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
