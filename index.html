@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>密碼卡片翻轉網站</title>
+  <title>Mo給你的卡片</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!-- 密碼輸入頁面 -->
   <div id="login">
     <input type="password" id="password" placeholder="請輸入密碼">
-    <button onclick="checkPassword()">確定</button>
+    <button onclick="checkPassword()">叮咚</button>
   </div>
 
   <!-- 卡片顯示區域 -->
@@ -21,7 +21,7 @@
       </div>
       <div class="card-back">
         <img id="backImage" src="" alt="背面圖片">
-        <p id="backText">這是卡片背面的文字</p>
+        <p id="backText"></p>
       </div>
     </div>
     <button class="flip-button" onclick="flipCard()">看背面</button>
